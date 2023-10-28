@@ -22,7 +22,7 @@ const Button = ({
 
   return (
     <button
-      className={`py-[12px] ${px} m-[10px] body-medium font-bold ${variants[variant]} hover:scale-105 duration-150`}
+      className={`py-[12px] ${px} m-[10px] body-medium font-bold ${variants[variant]} hover-scale`}
       onClick={onClick}
     >
       {children}

@@ -19,6 +19,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         montserrat: ["Montserrat", "sans-serif"],
+        inter: ["Inter", "sans-serif"],
       },
     },
   },
