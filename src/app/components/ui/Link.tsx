@@ -7,7 +7,14 @@ interface LinkProps {
 }
 
 const Link = ({ children, href }: LinkProps) => {
-    return (<NextLink href={href} className="body-large font-bold duration-100 hover:-translate-y-0.5">{children}</NextLink>);
+  return (
+    <NextLink
+      href={href}
+      className="body-large font-bold duration-100 hover:-translate-y-0.5"
+    >
+      {children}
+    </NextLink>
+  );
 };
 
 export default Link;

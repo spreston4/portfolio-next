@@ -42,6 +42,6 @@
   }
 
   .hover-scale {
-    @apply duration-150 hover:scale-105
+    @apply duration-150 hover:scale-105;
   }
 }
