@@ -17,7 +17,7 @@ const About = () => {
           <NumCard num="10+" text="Years of Professional Problem Solving" />
           <NumCard num="2" text="Years of Development" />
         </div>
-        <div className="w-[120px] h-[35px] rounded-tl-full rounded-tr-full bg-red"></div>
+        <div className="w-[180px] h-[40px] rounded-tl-full rounded-tr-full bg-red"></div>
       </div>
     </div>
   );

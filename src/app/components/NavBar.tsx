@@ -17,7 +17,7 @@ const NavBar = () => {
 
         <Button size="small">Let&apos;s Talk</Button>
       </div>
-      <div className="w-[220px] h-[85px] bg-red rounded-br-full rounded-bl-full z-0 absolute -top-0 left-[27%]"></div>
+      <div className="w-[248px] h-[55px] bg-red rounded-br-full rounded-bl-full z-0 absolute -top-0 left-[27%]"></div>
     </div>
   );
 };
