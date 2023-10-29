@@ -9,7 +9,7 @@ const NavBar = () => {
         <Logo />
 
         <div className="flex flex-row items-center gap-x-4">
-          <Link href="#">About</Link>
+          <Link href="#about">About</Link>
           <Link href="#">Portfolio</Link>
           <Link href="#">Services</Link>
           <Link href="#">Blog</Link>
@@ -17,7 +17,7 @@ const NavBar = () => {
 
         <Button size="small">Let&apos;s Talk</Button>
       </div>
-      <div className="w-[150px] h-[150px] bg-red rounded-full z-0 absolute -top-[70px] left-[30%]"></div>
+      <div className="w-[220px] h-[85px] bg-red rounded-br-full rounded-bl-full z-0 absolute -top-0 left-[27%]"></div>
     </div>
   );
 };

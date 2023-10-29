@@ -38,7 +38,11 @@
   }
 
   .container {
-    @apply mx-0 px-20 py-8 min-w-full;
+    @apply mx-0 px-20 py-10 min-w-full;
+  }
+
+  .container-thin {
+    @apply mx-0 px-60 py-10 min-w-full;
   }
 
   .hover-scale {
