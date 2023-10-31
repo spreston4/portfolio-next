@@ -45,7 +45,19 @@
     @apply mx-0 px-60 py-10 min-w-full;
   }
 
+  .icon-info {
+    @apply flex flex-row items-center justify-start gap-x-8;
+  }
+
+  .icon-bg-white {
+    @apply h-[30px] w-[30px] bg-white rounded-full flex items-center justify-center hover-scale hover:cursor-pointer;
+  }
+
+  .icon-small {
+    @apply h-[15px] w-[15px];
+  }
+
   .hover-scale {
-    @apply duration-150 hover:scale-105;
+    @apply duration-150 hover:scale-105 hover:shadow-md;
   }
 }
