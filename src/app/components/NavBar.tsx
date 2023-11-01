@@ -8,7 +8,7 @@ const NavBar = () => {
       <div className="flex flex-row items-center justify-between relative z-10">
         <Logo />
 
-        <div className="flex flex-row items-center gap-x-4">
+        <div className="flex flex-row items-center gap-x-4 text-dark">
           <Link href="#about">About</Link>
           <Link href="#">Portfolio</Link>
           <Link href="#">Services</Link>

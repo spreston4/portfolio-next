@@ -20,11 +20,8 @@ const Hero = () => {
           <Button variant="alternate">Portfolio</Button>
         </div>
       </div>
-      <div className="flex flex-col justify-end">
-        <div className="relatve">
-          <Image src={Headshot} alt="Sam Preston" height={520} width={460} className="relative z-10 mr-16"/>
-          {/* <Image src={HeadWhite} alt="Sam Preston" height={520} width={460} className="absolute z-5 bottom-[245px] translate-x-3 scale-105" /> */}
-        </div>
+      <div className="flex flex-col justify-end w-3/5">
+          <Image src={Headshot} alt="Sam Preston" height={520} width={460} className="self-center"/>
       </div>
     </div>
   );
