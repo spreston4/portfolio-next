@@ -42,7 +42,7 @@
   }
 
   .container-thin {
-    @apply mx-0 px-60 py-10 min-w-full;
+    @apply mx-0 px-60 py-10 w-screen;
   }
 
   .icon-info {

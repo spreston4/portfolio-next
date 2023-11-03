@@ -4,6 +4,7 @@ interface ButtonProps {
   children: React.ReactNode;
   onClick?: () => void;
   size?: "small" | "regular";
+  type?: "button" | "submit" | "reset" | undefined;
   variant?: "primary" | "alternate";
 }
 
@@ -11,6 +12,7 @@ const Button = ({
   children,
   onClick,
   size = "regular",
+  type = "button",
   variant = "primary",
 }: ButtonProps) => {
   const variants = {
@@ -24,6 +26,7 @@ const Button = ({
     <button
       className={`py-[12px] ${px} body-medium font-bold truncate ${variants[variant]} hover-scale`}
       onClick={onClick}
+      type={type}
     >
       {children}
     </button>

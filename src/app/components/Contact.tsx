@@ -4,7 +4,7 @@ import * as Icon from "react-feather";
 
 const Contact = () => {
   return (
-    <div className="container bg-pink relative">
+    <div className="container bg-pink relative" id="contact">
       <div className="flex flex-row justify-between gap-x-6">
         <div className="text-dark w-1/2 h-full flex flex-col gap-y-20">
           <div>

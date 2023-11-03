@@ -4,7 +4,7 @@ import * as Icon from "react-feather";
 
 const Footer = () => {
   return (
-    <div className="container-thin bg-dark flex flex-row items-center justify-between min-w-full">
+    <div className="container-thin bg-dark flex flex-row items-center justify-between min-w-full" id="footer">
       <div className="flex gap-x-10">
         <Link href="#about" className="text-white">
           About

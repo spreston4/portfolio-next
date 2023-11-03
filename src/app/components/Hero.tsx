@@ -5,7 +5,7 @@ import HeadWhite from "../../../public/assets/images/headshot_blank_white.png";
 
 const Hero = () => {
   return (
-    <div className="container bg-pink flex justify-between pb-0">
+    <div className="container bg-pink flex justify-between pb-0" id="hero">
       <div className="w-2/5 mb-10">
         <p className="body-xlarge text-dark">Full Stack Developer</p>
         <p className="heading-medium text-dark">Hi There, I&apos;m</p>
@@ -16,12 +16,20 @@ const Hero = () => {
           together.
         </p>
         <div className="mt-20 flex items-center justify-start gap-x-4">
-          <Button>Get in Touch</Button>
+          <a href="#contact">
+            <Button>Get in Touch</Button>
+          </a>
           <Button variant="alternate">Portfolio</Button>
         </div>
       </div>
       <div className="flex flex-col justify-end w-3/5">
-          <Image src={Headshot} alt="Sam Preston" height={520} width={460} className="self-center"/>
+        <Image
+          src={Headshot}
+          alt="Sam Preston"
+          height={520}
+          width={460}
+          className="self-center"
+        />
       </div>
     </div>
   );
