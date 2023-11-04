@@ -2,19 +2,25 @@ import Button from "./ui/Button";
 import Link from "./ui/Link";
 import Logo from "./ui/Logo";
 
+export const navLinks = [
+  { name: "About", href: "#about" },
+  { name: "Skills", href: "#skills" },
+  { name: "Portfolio", href: "#portfolio" },
+  { name: "Blog", href: "#blog" },
+];
+
 const NavBar = () => {
   return (
     <div className="container bg-pink relative" id="nav">
       <div className="flex flex-row items-center justify-between relative z-10">
         <Logo />
-
         <div className="flex flex-row items-center gap-x-4 text-dark">
-          <Link href="#about">About</Link>
-          <Link href="#">Portfolio</Link>
-          <Link href="#">Services</Link>
-          <Link href="#">Blog</Link>
+          {navLinks.map(({ name, href }) => (
+            <Link href={href} key={name}>
+              {name}
+            </Link>
+          ))}
         </div>
-
         <a href="#contact">
           <Button size="small">Let&apos;s Talk</Button>
         </a>

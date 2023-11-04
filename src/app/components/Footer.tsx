@@ -1,26 +1,31 @@
 import Logo from "./ui/Logo";
 import Link from "./ui/Link";
+import { navLinks } from "./NavBar";
 import * as Icon from "react-feather";
 
 const Footer = () => {
+  const halfLinks = Math.ceil(navLinks.length / 2);
+  const firstHalf = navLinks.slice(0, halfLinks);
+  const secondHalf = navLinks.slice(halfLinks, navLinks.length);
   return (
-    <div className="container-thin bg-dark flex flex-row items-center justify-between min-w-full" id="footer">
+    <div
+      className="container-thin bg-dark flex flex-row items-center justify-between min-w-full"
+      id="footer"
+    >
       <div className="flex gap-x-10">
-        <Link href="#about" className="text-white">
-          About
-        </Link>
-        <Link href="#services" className="text-white">
-          Portfolio
-        </Link>
+        {firstHalf.map(({ name, href }) => (
+          <Link href={href} key={name} className="text-white">
+            {name}
+          </Link>
+        ))}
       </div>
       <Logo variant="alternate" />
       <div className="flex gap-x-10">
-        <Link href="#about" className="text-white">
-          Services
-        </Link>
-        <Link href="#services" className="text-white">
-          Blog
-        </Link>
+        {secondHalf.map(({ name, href }) => (
+          <Link href={href} key={name} className="text-white">
+            {name}
+          </Link>
+        ))}
       </div>
     </div>
   );
