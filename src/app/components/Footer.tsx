@@ -19,7 +19,9 @@ const Footer = () => {
           </Link>
         ))}
       </div>
-      <Logo variant="alternate" />
+      <a href="#">
+        <Logo variant="alternate" className="hover-translate" />
+      </a>
       <div className="flex gap-x-10">
         {secondHalf.map(({ name, href }) => (
           <Link href={href} key={name} className="text-white">

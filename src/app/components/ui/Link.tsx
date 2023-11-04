@@ -11,7 +11,7 @@ const Link = ({ children, className, href }: LinkProps) => {
   return (
     <NextLink
       href={href}
-      className={`body-large font-bold duration-100 hover:-translate-y-0.5 ${className}`}
+      className={`body-large font-bold hover-translate ${className}`}
     >
       {children}
     </NextLink>

@@ -8,7 +8,7 @@ const Input = ({ placeholder, type = "input" }: InputProps) => {
   return isInput ? (
     <input
       placeholder={placeholder}
-      className="w-full py-[14px] px-[16px] body-small text-dark duration-150 focus:outline-none focus:shadow-md"
+      className="w-full py-[14px] px-[16px] body-small text-dark duration-150 hover: shadow-sm focus:outline-none focus:shadow-md"
     ></input>
   ) : (
     <textarea

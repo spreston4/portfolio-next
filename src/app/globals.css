@@ -60,4 +60,8 @@
   .hover-scale {
     @apply duration-150 hover:scale-105 hover:shadow-md;
   }
+
+  .hover-translate {
+    @apply duration-100 hover:-translate-y-0.5;
+  }
 }
