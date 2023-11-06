@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "@tailwindcss/typography": "^0.5.10",
     "feather-icons": "^4.29.1",
     "next": "14.0.0",

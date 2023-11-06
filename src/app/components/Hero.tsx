@@ -19,7 +19,9 @@ const Hero = () => {
           <a href="#contact">
             <Button>Get in Touch</Button>
           </a>
-          <Button variant="alternate">Portfolio</Button>
+          <a href="#portfolio">
+            <Button variant="alternate">Portfolio</Button>
+          </a>
         </div>
       </div>
       <div className="flex flex-col justify-end w-3/5">

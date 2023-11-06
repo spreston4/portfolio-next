@@ -1,6 +1,7 @@
 import Button from "./ui/Button";
 import Input from "./ui/Input";
 import useInput from "../hooks/useInput";
+import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
   let formValid = false;
@@ -56,17 +57,41 @@ const ContactForm = () => {
     messageResetHandler();
   };
 
-  const submitFormHandler = () => {
+  const submitFormHandler = (event: React.FormEvent) => {
     event?.preventDefault();
     if (!formValid) {
       console.log("Error submitting form");
       return;
     }
-    console.log("Form Submitted");
+
+    const messageParams = { name, email, phone, message };
+
+    if (
+      !process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID ||
+      !process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID ||
+      !process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY
+    ) {
+      console.log("Configure email params");
+      return;
+    }
+
+    emailjs
+      .send(
+        process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID,
+        messageParams,
+        process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY
+      )
+      .then((response) => {
+        if (response.status === 200) {
+          console.log("Message sent");
+          resetFormHandler();
+        }
+      });
   };
 
   return (
-    <form className=" mt-4 flex flex-col gap-y-6">
+    <form onSubmit={submitFormHandler} className=" mt-4 flex flex-col gap-y-6">
       <Input
         placeholder="Name*"
         value={name}
@@ -86,7 +111,9 @@ const ContactForm = () => {
         value={phone}
         onChange={phoneChangeHandler}
         onBlur={phoneBlurHandler}
-        error={phoneError ? "Please enter a valid phone number (not required)." : ""}
+        error={
+          phoneError ? "Please enter a valid phone number (not required)." : ""
+        }
         errorType="warning"
       />
       <Input
@@ -97,9 +124,7 @@ const ContactForm = () => {
         onBlur={messageBlurHandler}
         error={messageError ? "Please enter a message." : ""}
       />
-      <Button type="submit" onClick={submitFormHandler}>
-        Send Message
-      </Button>
+      <Button type="submit">Send Message</Button>
     </form>
   );
 };

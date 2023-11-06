@@ -1,6 +1,7 @@
 interface InputProps {
   error?: string;
   errorType?: "error" | "warning";
+  name?: string;
   onChange?: (
     event:
       | React.ChangeEvent<HTMLInputElement>
@@ -19,6 +20,7 @@ interface InputProps {
 const Input = ({
   error = "",
   errorType = "error",
+  name = "",
   onChange,
   onBlur,
   placeholder,
@@ -30,6 +32,8 @@ const Input = ({
   return isInput ? (
     <div className="relative">
       <input
+        name={name}
+        id={name}
         onChange={onChange}
         onBlur={onBlur}
         value={value}
@@ -41,6 +45,8 @@ const Input = ({
   ) : (
     <div className="relative">
       <textarea
+        name={name}
+        id={name}
         onChange={onChange}
         onBlur={onBlur}
         value={value}
