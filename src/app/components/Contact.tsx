@@ -1,5 +1,4 @@
-import Button from "./ui/Button";
-import Input from "./ui/Input";
+import ContactForm from "./ContactForm";
 import * as Icon from "react-feather";
 
 const Contact = () => {
@@ -44,13 +43,9 @@ const Contact = () => {
             </a>
           </div>
         </div>
-        <form className="w-2/5 mt-4 flex flex-col gap-y-6">
-          <Input placeholder="Name" />
-          <Input placeholder="Email" />
-          <Input placeholder="Phone Number" />
-          <Input placeholder="Message" type="textarea" />
-          <Button>Send Message</Button>
-        </form>
+        <div className="w-2/5">
+          <ContactForm />
+        </div>
       </div>
       <div className="h-[200px] w-[45px] absolute left-0 top-[40%] bg-red rounded-tr-full rounded-br-full"></div>
     </div>

@@ -31,7 +31,7 @@ const Portfolio = () => {
         <p className="body-medium">Explore some examples of my work.</p>
       </div>
       <div className="container bg-white">
-        <div className=" flex items-stretch justify-between flex-wrap gap-12">
+        <div className=" flex items-center justify-evenly flex-wrap gap-12">
           {projects.map(({ title, description, image, url }) => (
             <ProjectCard
               title={title}

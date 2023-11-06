@@ -37,6 +37,14 @@
     @apply font-montserrat text-[12px] leading-[1.5];
   }
 
+  .body-error {
+    @apply body-xsmall text-red;
+  }
+
+  .body-warning {
+    @apply body-xsmall text-warning
+  }
+
   .container {
     @apply mx-0 px-20 py-10 min-w-full;
   }
