@@ -84,14 +84,14 @@ const ContactForm = () => {
 
     const messageParams = { name, email, phone, message };
 
-    if (
-      !process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID ||
-      !process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID ||
-      !process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY
-    ) {
-      console.log("Configure email params");
-      return;
-    }
+    // if (
+    //   !process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID ||
+    //   !process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID ||
+    //   !process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY
+    // ) {
+    //   console.log("Configure email params");
+    //   return;
+    // }
 
     if (process.env.NEXT_PUBLIC_EMAIL_TOGGLE === "off") {
       resetFormHandler();
@@ -99,6 +99,7 @@ const ContactForm = () => {
     } else {
       emailjs
         .send(
+            // @ts-ignoresignore
           process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID,
           process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID,
           messageParams,
