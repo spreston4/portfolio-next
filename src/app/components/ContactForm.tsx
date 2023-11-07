@@ -6,7 +6,7 @@ import useInput from "../hooks/useInput";
 import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
-  const [popAlert, setPopAlert] = useState<boolean>(true);
+  const [popAlert, setPopAlert] = useState<boolean>(false);
   const [popTimeout, setPopTimeout] = useState<boolean>(false);
   let formValid = false;
   const emailRegex = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/i;
