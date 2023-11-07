@@ -26,7 +26,7 @@ const Portfolio = () => {
   ];
   return (
     <div id="portfolio">
-      <div className="container bg-pink flex flex-col items-center">
+      <div className="container bg-white flex flex-col items-center">
         <h2 className="heading-small text-dark mb-6">Portfolio</h2>
         <p className="body-medium">Explore some examples of my work.</p>
       </div>
