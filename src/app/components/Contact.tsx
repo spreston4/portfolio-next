@@ -3,7 +3,7 @@ import * as Icon from "react-feather";
 
 const Contact = () => {
   return (
-    <div className="container bg-pink relative" id="contact">
+    <div className="container bg-prim-light relative" id="contact">
       <div className="flex flex-row justify-between gap-x-6">
         <div className="text-dark w-1/2 h-full flex flex-col gap-y-20">
           <div>
@@ -47,7 +47,7 @@ const Contact = () => {
           <ContactForm />
         </div>
       </div>
-      <div className="h-[200px] w-[45px] absolute left-0 top-[40%] bg-red rounded-tr-full rounded-br-full"></div>
+      <div className="h-[200px] w-[45px] absolute left-0 top-[40%] bg-prim-dark rounded-tr-full rounded-br-full"></div>
     </div>
   );
 };

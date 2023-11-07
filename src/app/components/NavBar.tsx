@@ -11,7 +11,7 @@ export const navLinks = [
 
 const NavBar = () => {
   return (
-    <div className="container bg-pink relative" id="nav">
+    <div className="container bg-prim-light relative" id="nav">
       <div className="flex flex-row items-center justify-between relative z-10">
         <Logo />
         <div className="flex flex-row items-center gap-x-4 text-dark">
@@ -25,7 +25,7 @@ const NavBar = () => {
           <Button size="small">Let&apos;s Talk</Button>
         </a>
       </div>
-      <div className="w-[248px] h-[55px] bg-red rounded-br-full rounded-bl-full z-0 absolute -top-0 left-[27%]"></div>
+      <div className="w-[248px] h-[55px] bg-prim-dark rounded-br-full rounded-bl-full z-0 absolute -top-0 left-[27%]"></div>
     </div>
   );
 };

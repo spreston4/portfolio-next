@@ -23,7 +23,7 @@ const Skills = () => {
   ];
   return (
     <div
-      className="container bg-pink text-dark flex flex-col items-center"
+      className="container bg-white text-dark flex flex-col items-center"
       id="skills"
     >
       <h2 className="heading-small mb-6">Core Skills</h2>

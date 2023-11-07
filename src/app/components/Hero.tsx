@@ -5,11 +5,11 @@ import HeadWhite from "../../../public/assets/images/headshot_blank_white.png";
 
 const Hero = () => {
   return (
-    <div className="container bg-pink flex justify-between pb-0" id="hero">
+    <div className="container bg-prim-light flex justify-between pb-0" id="hero">
       <div className="w-2/5 mb-10">
         <p className="body-xlarge text-dark">Full Stack Developer</p>
         <p className="heading-medium text-dark">Hi There, I&apos;m</p>
-        <h1 className="heading-medium text-red">Sam Preston</h1>
+        <h1 className="heading-medium text-prim-dark">Sam Preston</h1>
         <p className="body-medium text-dark">
           Welcome to my portfolio! I create captivating user experiences.
           Explore my work and let&apos;s create something extraordinary

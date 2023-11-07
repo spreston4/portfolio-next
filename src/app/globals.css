@@ -38,7 +38,7 @@
   }
 
   .body-error {
-    @apply body-xsmall text-red;
+    @apply body-xsmall text-prim-dark;
   }
 
   .body-warning {

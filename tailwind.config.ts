@@ -8,8 +8,8 @@ const config: Config = {
   ],
   theme: {
     colors: {
-      red: "#FC3314",
-      pink: "#FFD4D0",
+      "prim-dark": "#FC3314",
+      "prim-light": "#FFD4D0",
       dark: "#1F1F1F",
       "dark-grey": "#8D8D8D",
       "medium-grey": "#E1E1E1",

@@ -25,7 +25,7 @@ const ProjectCard = ({
           <p className="body-small text-dark-grey">{description}</p>
         </div>
         <a href={url} target="_blank">
-          <div className="icon-bg-large bg-red">
+          <div className="icon-bg-large bg-prim-dark">
             <ArrowUpRight className="text-white" />
           </div>
         </a>
