@@ -62,7 +62,7 @@
   }
 
   .icon-bg-large {
-    @apply h-[40px] w-[40px] rounded-full flex items-center justify-center hover-scale hover:cursor-pointer
+    @apply h-[40px] w-[40px] rounded-full flex items-center justify-center hover-scale hover:cursor-pointer;
   }
 
   .icon-small {
@@ -97,11 +97,24 @@
     }
   }
 
+  @keyframes infinite-scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-106.25%);
+    }
+  }
+
   .animate-slide-up {
     animation: slide-up 0.3s ease-in-out;
   }
 
   .animate-slide-down {
     animation: slide-down 0.3s ease-in-out;
+  }
+
+  .animate-infinite-scroll {
+    animation: infinite-scroll 25s linear infinite;
   }
 }
