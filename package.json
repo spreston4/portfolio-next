@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:github": "NEXT_PUBLIC_EMAIL_SERVICE_ID=$NEXT_PUBLIC_EMAIL_SERVICE_ID NEXT_PUBLIC_EMAIL_TEMPLATE_ID=$NEXT_PUBLIC_EMAIL_TEMPLATE_ID NEXT_PUBLIC_EMAIL_PUBLIC_KEY=$NEXT_PUBLIC_EMAIL_PUBLIC_KEY next build",
     "start": "next start",
     "lint": "next lint"
   },
