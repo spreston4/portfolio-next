@@ -14,6 +14,7 @@ const config: Config = {
       "dark-grey": "#8D8D8D",
       "medium-grey": "#E1E1E1",
       grey: "#F7F7F7",
+      success: "#198754",
       warning: "#E68A00",
       white: "#FFFFFF",
     },

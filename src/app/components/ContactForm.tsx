@@ -1,9 +1,13 @@
+import { useState } from "react";
 import Button from "./ui/Button";
 import Input from "./ui/Input";
+import PopAlert from "./ui/PopAlert";
 import useInput from "../hooks/useInput";
 import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
+  const [popAlert, setPopAlert] = useState<boolean>(false);
+  const [popTimeout, setPopTimeout] = useState<boolean>(false);
   let formValid = false;
   const emailRegex = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/i;
   const phoneRegex = /^(\+\d{1,2}\s?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/i;
@@ -57,10 +61,24 @@ const ContactForm = () => {
     messageResetHandler();
   };
 
+  const showPopAlertHandler = () => {
+    setPopAlert(true);
+    setTimeout(() => {
+      hidePopAlertHandler();
+    }, 3500);
+  };
+
+  const hidePopAlertHandler = () => {
+    setPopTimeout(true);
+    setTimeout(() => {
+      setPopTimeout(false);
+      setPopAlert(false);
+    }, 300);
+  };
+
   const submitFormHandler = (event: React.FormEvent) => {
     event?.preventDefault();
     if (!formValid) {
-      console.log("Error submitting form");
       return;
     }
 
@@ -75,19 +93,24 @@ const ContactForm = () => {
       return;
     }
 
-    emailjs
-      .send(
-        process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID,
-        process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID,
-        messageParams,
-        process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY
-      )
-      .then((response) => {
-        if (response.status === 200) {
-          console.log("Message sent");
-          resetFormHandler();
-        }
-      });
+    if (process.env.NEXT_PUBLIC_EMAIL_TOGGLE === "off") {
+      resetFormHandler();
+      showPopAlertHandler();
+    } else {
+      emailjs
+        .send(
+          process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID,
+          process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID,
+          messageParams,
+          process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY
+        )
+        .then((response) => {
+          if (response.status === 200) {
+            resetFormHandler();
+            showPopAlertHandler();
+          }
+        });
+    }
   };
 
   return (
@@ -125,6 +148,13 @@ const ContactForm = () => {
         error={messageError ? "Please enter a message." : ""}
       />
       <Button type="submit">Send Message</Button>
+      {popAlert && (
+        <PopAlert
+          message="Message sent!"
+          onClose={hidePopAlertHandler}
+          timeout={popTimeout}
+        />
+      )}
     </form>
   );
 };

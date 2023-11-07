@@ -42,7 +42,7 @@
   }
 
   .body-warning {
-    @apply body-xsmall text-warning
+    @apply body-xsmall text-warning;
   }
 
   .container {
@@ -61,6 +61,10 @@
     @apply h-[30px] w-[30px] bg-white rounded-full flex items-center justify-center hover-scale hover:cursor-pointer;
   }
 
+  .icon-bg-large {
+    @apply h-[40px] w-[40px] rounded-full flex items-center justify-center hover-scale hover:cursor-pointer
+  }
+
   .icon-small {
     @apply h-[15px] w-[15px];
   }
@@ -71,5 +75,33 @@
 
   .hover-translate {
     @apply duration-100 hover:-translate-y-0.5;
+  }
+}
+
+@layer utilities {
+  @keyframes slide-up {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slide-down {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(100%);
+    }
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.3s ease-in-out;
+  }
+
+  .animate-slide-down {
+    animation: slide-down 0.3s ease-in-out;
   }
 }
