@@ -32,13 +32,13 @@ const Contact = () => {
               href="https://www.linkedin.com/in/sam-preston-5601b311a/"
               target="_blank"
             >
-              <div className="icon-bg-white">
-                <Icon.Linkedin className="icon-small" fill="text-dark" />
+              <div className="icon-bg-large bg-white">
+                <Icon.Linkedin className="text-dark" fill="text-dark"/>
               </div>
             </a>
             <a href="https://github.com/spreston4" target="_blank">
-              <div className="icon-bg-white">
-                <Icon.GitHub className="icon-small" fill="text-dark" />
+              <div className="icon-bg-large bg-white">
+                <Icon.GitHub className="text-dark" />
               </div>
             </a>
           </div>
