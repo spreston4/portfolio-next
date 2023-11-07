@@ -14,7 +14,12 @@ const Footer = () => {
     >
       <div className="flex gap-x-10">
         {firstHalf.map(({ name, href }) => (
-          <Link href={href} key={name} className="text-white">
+          <Link
+            href={href}
+            key={name}
+            external={name === "Resume"}
+            className="text-white"
+          >
             {name}
           </Link>
         ))}
@@ -24,7 +29,12 @@ const Footer = () => {
       </a>
       <div className="flex gap-x-10">
         {secondHalf.map(({ name, href }) => (
-          <Link href={href} key={name} className="text-white">
+          <Link
+            href={href}
+            key={name}
+            external={name === "Resume"}
+            className="text-white"
+          >
             {name}
           </Link>
         ))}

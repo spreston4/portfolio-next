@@ -6,7 +6,7 @@ export const navLinks = [
   { name: "About", href: "#about" },
   { name: "Skills", href: "#skills" },
   { name: "Portfolio", href: "#portfolio" },
-  { name: "Blog", href: "#blog" },
+  { name: "Resume", href: "/assets/pdf/ResumeSep2023.pdf" },
 ];
 
 const NavBar = () => {
@@ -16,7 +16,7 @@ const NavBar = () => {
         <Logo />
         <div className="flex flex-row items-center gap-x-4 text-dark">
           {navLinks.map(({ name, href }) => (
-            <Link href={href} key={name}>
+            <Link href={href} key={name} external={name === "Resume"}>
               {name}
             </Link>
           ))}
