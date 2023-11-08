@@ -2,7 +2,12 @@ import Button from "./ui/Button";
 import Link from "./ui/Link";
 import Logo from "./ui/Logo";
 
-export const navLinks = [
+export interface NavLinkObject {
+  name: string;
+  href: string;
+}
+
+export const navLinks: NavLinkObject[] = [
   { name: "About", href: "#about" },
   { name: "Skills", href: "#skills" },
   { name: "Portfolio", href: "#portfolio" },

@@ -1,11 +1,13 @@
 import Button from "./ui/Button";
 import Image from "next/image";
 import Headshot from "../../../public/assets/images/headshot_blank.png";
-import HeadWhite from "../../../public/assets/images/headshot_blank_white.png";
 
 const Hero = () => {
   return (
-    <div className="container bg-prim-light flex justify-between pb-0" id="hero">
+    <div
+      className="container bg-prim-light flex justify-between pb-0"
+      id="hero"
+    >
       <div className="w-2/5 mb-10">
         <p className="body-xlarge text-dark">Full Stack Developer</p>
         <p className="heading-medium text-dark">Hi There, I&apos;m</p>

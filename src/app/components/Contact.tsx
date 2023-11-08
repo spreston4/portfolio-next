@@ -1,7 +1,32 @@
+import * as React from "react";
 import ContactForm from "./ContactForm";
 import * as Icon from "react-feather";
 
+interface ContactObject {
+  name: string;
+  icon: React.ReactNode;
+  text: string;
+}
+
 const Contact = () => {
+  const contactBank: ContactObject[] = [
+    { name: "phone", icon: <Icon.PhoneCall />, text: "+1 (503) 956-4531" },
+    { name: "email", icon: <Icon.Mail />, text: "sam.preston11@gmail.com" },
+    { name: "location", icon: <Icon.MapPin />, text: "Hillsboro, OR" },
+  ];
+
+  const socialBank: ContactObject[] = [
+    {
+      name: "linkedin",
+      icon: <Icon.Linkedin className="text-dark" fill="text-dark" />,
+      text: "https://www.linkedin.com/in/sam-preston-5601b311a/",
+    },
+    {
+      name: "github",
+      icon: <Icon.GitHub className="text-dark" />,
+      text: "https://github.com/spreston4",
+    },
+  ];
   return (
     <div className="container bg-prim-light relative" id="contact">
       <div className="flex flex-row justify-between gap-x-6">
@@ -14,33 +39,19 @@ const Contact = () => {
             </p>
           </div>
           <div className="flex flex-col items-start justify-center gap-y-6 body-medium">
-            <div className="icon-info">
-              <Icon.PhoneCall />
-              <p>+1 (503) 956-4531</p>
-            </div>
-            <div className="icon-info">
-              <Icon.Mail />
-              <p>sam.preston11@gmail.com</p>
-            </div>
-            <div className="icon-info">
-              <Icon.MapPin />
-              <p>Hillsboro, OR</p>
-            </div>
+            {contactBank.map(({ name, icon, text }: ContactObject) => (
+              <div key={name} className="icon-info">
+                {icon}
+                {text}
+              </div>
+            ))}
           </div>
           <div className="flex flex-row gap-x-8">
-            <a
-              href="https://www.linkedin.com/in/sam-preston-5601b311a/"
-              target="_blank"
-            >
-              <div className="icon-bg-large bg-white">
-                <Icon.Linkedin className="text-dark" fill="text-dark"/>
-              </div>
-            </a>
-            <a href="https://github.com/spreston4" target="_blank">
-              <div className="icon-bg-large bg-white">
-                <Icon.GitHub className="text-dark" />
-              </div>
-            </a>
+            {socialBank.map(({ name, icon, text }: ContactObject) => (
+              <a href={text} target="_blank" key={name}>
+                <div className="icon-bg-large bg-white">{icon}</div>
+              </a>
+            ))}
           </div>
         </div>
         <div className="w-2/5">
