@@ -28,7 +28,7 @@ const Contact = () => {
     },
   ];
   return (
-    <div className="container bg-prim-light relative" id="contact">
+    <div className="container relative" id="contact">
       <div className="flex flex-row justify-between gap-x-6">
         <div className="text-dark w-1/2 h-full flex flex-col gap-y-20">
           <div>

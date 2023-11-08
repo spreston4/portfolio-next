@@ -5,7 +5,7 @@ import Headshot from "../../../public/assets/images/headshot_blank.png";
 const Hero = () => {
   return (
     <div
-      className="container bg-prim-light flex justify-between pb-0"
+      className="container flex justify-between pb-0"
       id="hero"
     >
       <div className="w-2/5 mb-10">

@@ -16,7 +16,7 @@ export const navLinks: NavLinkObject[] = [
 
 const NavBar = () => {
   return (
-    <div className="container bg-prim-light relative" id="nav">
+    <div className="container relative" id="nav">
       <div className="flex flex-row items-center justify-between relative z-10">
         <Logo />
         <div className="flex flex-row items-center gap-x-4 text-dark">
