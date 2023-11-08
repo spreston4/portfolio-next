@@ -11,7 +11,7 @@ export const navLinks: NavLinkObject[] = [
   { name: "About", href: "#about" },
   { name: "Skills", href: "#skills" },
   { name: "Portfolio", href: "#portfolio" },
-  { name: "Resume", href: "/assets/pdf/ResumeSep2023.pdf" },
+  { name: "Resume", href: "/assets/pdf/SamPrestonResumeNov2023.pdf" },
 ];
 
 const NavBar = () => {
