@@ -43,7 +43,7 @@ const Skills = () => {
 
   return (
     <div
-      className="container bg-white text-dark flex flex-col items-center overflow-hidden"
+      className="container-mobile md:container bg-white text-dark flex flex-col items-center overflow-hidden"
       id="skills"
     >
       <h2 className="heading-small mb-6">Core Skills</h2>

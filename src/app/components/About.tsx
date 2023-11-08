@@ -2,10 +2,13 @@ import NumCard from "./ui/NumCard";
 
 const About = () => {
   return (
-    <div className="container-thin bg-dark text-white pb-0" id="about">
+    <div
+      className="container-mobile md:container-thin bg-dark text-white pb-0 md:pb-0"
+      id="about"
+    >
       <div className="flex flex-col items-center justify-between gap-y-8 w-full">
         <h2 className="heading-small">About Me</h2>
-        <p className="body-medium text-center">
+        <p className="body-large sm:body-medium text-center">
           I&apos;m Sam Preston, a Full Stack Developer dedicated to crafting
           intuitive and visually stunning digital experiences. With 10+ years of
           professional problem solving, I transform ideas into functional and

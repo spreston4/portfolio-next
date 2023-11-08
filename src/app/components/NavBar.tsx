@@ -16,17 +16,19 @@ export const navLinks: NavLinkObject[] = [
 
 const NavBar = () => {
   return (
-    <div className="container relative" id="nav">
-      <div className="flex flex-row items-center justify-between relative z-10">
-        <Logo />
-        <div className="flex flex-row items-center gap-x-4 text-dark">
+    <div className="container-mobile sm:container relative" id="nav">
+      <div className="w-full flex flex-row items-center justify-center sm:justify-between relative z-10">
+        <div className="hidden sm:block">
+          <Logo />
+        </div>
+        <div className="flex flex-row items-center justify-center gap-x-4 md:gap-x-10 text-dark pt-10 sm:pt-0">
           {navLinks.map(({ name, href }) => (
             <Link href={href} key={name} external={name === "Resume"}>
               {name}
             </Link>
           ))}
         </div>
-        <a href="#contact">
+        <a href="#contact" className="hidden sm:block">
           <Button size="small">Let&apos;s Talk</Button>
         </a>
       </div>

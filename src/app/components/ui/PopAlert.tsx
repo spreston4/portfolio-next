@@ -11,7 +11,7 @@ const PopAlert = ({ message, onClose, timeout }: PopAlertProps) => {
   return (
     <div className="fixed top-0 left-0 w-screen h-screen flex items-end justify-end z-50">
       <div
-        className={`bg-white py-4 pl-4 pr-10 body-medium flex items-center justify-start gap-2 shadow-xl relative ${slide}`}
+        className={`bg-white py-4 pl-4 pr-10 body-large sm:body-medium flex items-center justify-start gap-2 shadow-xl relative ${slide}`}
       >
         <div className="h-[40px] w-[40px] rounded-full flex items-center justify-center bg-success">
           <Check className="text-white" />

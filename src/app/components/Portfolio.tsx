@@ -26,11 +26,11 @@ const Portfolio = () => {
   ];
   return (
     <div id="portfolio">
-      <div className="container bg-white flex flex-col items-center">
+      <div className="container-mobile md:container bg-white flex flex-col items-center">
         <h2 className="heading-small text-dark mb-6">Portfolio</h2>
-        <p className="body-medium">Explore some examples of my work.</p>
+        <p className="body-large sm:body-medium">Explore some examples of my work.</p>
       </div>
-      <div className="container bg-white">
+      <div className="container-mobile md:container bg-white">
         <div className=" flex items-center justify-evenly flex-wrap gap-12">
           {projects.map(({ title, description, image, url }) => (
             <ProjectCard

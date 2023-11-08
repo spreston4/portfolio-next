@@ -29,6 +29,9 @@ const Input = ({
 }: InputProps) => {
   const isInput = type === "input";
   const errorStyle = errorType === "error" ? "body-error" : "body-warning";
+  const classes =
+    "w-full py-[18px] sm:py-[14px] px-[16px] body-medium sm:body-small text-dark duration-150 hover: shadow-sm focus:outline-none focus:shadow-md";
+  const errorDisplay = <p className={`${errorStyle} font-bold absolute`}>{error}</p>;
   return isInput ? (
     <div className="relative">
       <input
@@ -38,9 +41,9 @@ const Input = ({
         onBlur={onBlur}
         value={value}
         placeholder={placeholder}
-        className="w-full py-[14px] px-[16px] body-small text-dark duration-150 hover: shadow-sm focus:outline-none focus:shadow-md"
+        className={classes}
       ></input>
-      <p className={`${errorStyle} absolute`}>{error}</p>
+      {errorDisplay}
     </div>
   ) : (
     <div className="relative">
@@ -51,11 +54,11 @@ const Input = ({
         onBlur={onBlur}
         value={value}
         placeholder={placeholder}
-        className="w-full py-[14px] px-[16px] body-small text-dark duration-150 focus:outline-none focus:shadow-md"
+        className={classes}
         rows={5}
         style={{ resize: "none" }}
       ></textarea>
-      <p className="body-error absolute">{error}</p>
+      {errorDisplay}
     </div>
   );
 };

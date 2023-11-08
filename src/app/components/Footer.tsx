@@ -9,7 +9,7 @@ const Footer = () => {
 
   const linkMapDisplay = (links: NavLinkObject[]) => {
     return (
-      <div className="flex gap-x-10">
+      <div className="flex justify-evenly gap-x-4">
         {links.map(({ name, href }) => (
           <Link
             href={href}
@@ -25,11 +25,11 @@ const Footer = () => {
   };
   return (
     <div
-      className="container-thin bg-dark flex flex-row items-center justify-center gap-x-24 min-w-full"
+      className="container-mobile md:container-thin bg-dark flex flex-row items-center justify-center sm:justify-evenly gap-x-4 sm:gap-x-24 min-w-full"
       id="footer"
     >
       {linkMapDisplay(firstHalf)}
-      <a href="#">
+      <a href="#" className="hidden sm:block">
         <Logo variant="alternate" className="hover-translate" />
       </a>
       {linkMapDisplay(secondHalf)}

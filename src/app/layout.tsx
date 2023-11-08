@@ -13,10 +13,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="!scroll-smooth">
-      <body className="w-screen bg-prim-light">
-        <div className="w-full relative z-0">
-          <div className="w-full relative z-20">{children}</div>
-          <div className="w-full h-full bg-dots absolute z-10 bottom-0 left-0"></div>
+      <body className="w-[calc(100dvw)] bg-prim-light p-0">
+        <div className="min-w-full relative z-0 p-0">
+          <div className="min-w-full relative z-20 p-0">{children}</div>
+          <div className="min-w-full h-full bg-dots absolute z-10 bottom-0 left-0 p-0"></div>
         </div>
       </body>
     </html>

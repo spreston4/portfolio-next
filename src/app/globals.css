@@ -50,7 +50,11 @@
   }
 
   .container-thin {
-    @apply mx-0 px-60 py-10 w-screen;
+    @apply mx-0 px-60 py-10 min-w-full;
+  }
+
+  .container-mobile {
+    @apply mx-0 px-5 py-10 min-w-full
   }
 
   .icon-info {
@@ -71,6 +75,10 @@
 
   .icon-bg-large {
     @apply h-[40px] w-[40px] rounded-full flex items-center justify-center hover-scale hover:cursor-pointer;
+  }
+
+  .icon-bg-mobile {
+    @apply h-[64px] w-[64px] rounded-full flex items-center justify-center hover-scale hover:cursor-pointer
   }
 
   .icon-small {

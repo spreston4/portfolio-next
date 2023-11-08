@@ -12,7 +12,7 @@ const Link = ({ children, className, external = false, href }: LinkProps) => {
   return (
     <NextLink
       href={href}
-      className={`body-large font-bold hover-translate ${className}`}
+      className={`body-xlarge sm:body-large font-bold hover-translate ${className}`}
       target={external ? "_blank" : "_self"}
     >
       {children}

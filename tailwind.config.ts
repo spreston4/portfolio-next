@@ -18,6 +18,10 @@ const config: Config = {
       warning: "#E68A00",
       white: "#FFFFFF",
     },
+    screens: {
+      sm: "700px",
+      md: "960px",
+    },
     extend: {
       fontFamily: {
         montserrat: ["Montserrat", "sans-serif"],

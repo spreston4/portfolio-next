@@ -5,14 +5,14 @@ import Headshot from "../../../public/assets/images/headshot_blank.png";
 const Hero = () => {
   return (
     <div
-      className="container flex justify-between pb-0"
+      className="container flex justify-center md:justify-between pb-0"
       id="hero"
     >
-      <div className="w-2/5 mb-10">
+      <div className="full md:w-2/5 flex flex-col items-center md:items-start mb-10">
         <p className="body-xlarge text-dark">Full Stack Developer</p>
         <p className="heading-medium text-dark">Hi There, I&apos;m</p>
         <h1 className="heading-medium text-prim-dark">Sam Preston</h1>
-        <p className="body-medium text-dark">
+        <p className="body-large sm:body-medium text-dark w-[400px] text-center md:text-left">
           Welcome to my portfolio! I create captivating user experiences.
           Explore my work and let&apos;s create something extraordinary
           together.
@@ -26,7 +26,7 @@ const Hero = () => {
           </a>
         </div>
       </div>
-      <div className="flex flex-col justify-end w-3/5">
+      <div className="hidden md:flex md:flex-col md:justify-end md:w-3/5">
         <Image
           src={Headshot}
           alt="Sam Preston"
