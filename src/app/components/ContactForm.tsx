@@ -151,7 +151,7 @@ const ContactForm = () => {
         onBlur={messageBlurHandler}
         error={messageError ? "Please enter a message." : ""}
       />
-      <div className="flex flex-col gap-6 sm:flex-row justify-center sm:justify-between">
+      <div className="flex flex-col gap-6 sm:flex-row justify-center sm:justify-start">
         <Button disabled={!formValid} type="submit">
           Send Message
         </Button>
