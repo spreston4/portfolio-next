@@ -114,7 +114,11 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={submitFormHandler} className="mt-4 flex flex-col gap-y-6" id="contact-form">
+    <form
+      onSubmit={submitFormHandler}
+      className="mt-4 flex flex-col gap-y-6"
+      id="contact-form"
+    >
       <Input
         placeholder="Name*"
         value={name}
@@ -147,7 +151,14 @@ const ContactForm = () => {
         onBlur={messageBlurHandler}
         error={messageError ? "Please enter a message." : ""}
       />
-      <Button disabled={!formValid} type="submit">Send Message</Button>
+      <div className="flex flex-col gap-6 sm:flex-row justify-center sm:justify-between">
+        <Button disabled={!formValid} type="submit">
+          Send Message
+        </Button>
+        <Button onClick={resetFormHandler}  variant="alternate">
+          Reset
+        </Button>
+      </div>
       {popAlert && (
         <PopAlert
           message="Message sent!"
