@@ -1,18 +1,17 @@
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
 import { ArrowUpRight } from "react-feather";
-import ph from "../../../../public/assets/images/projects/placeholder.jpg";
 
 export interface ProjectCardProps {
   description: string;
-  image?: string | StaticImport;
+  image: string | StaticImport;
   title: string;
   url: string;
 }
 
 const ProjectCard = ({
   description,
-  image = ph,
+  image,
   title,
   url,
 }: ProjectCardProps) => {

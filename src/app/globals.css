@@ -138,8 +138,8 @@
     /* --x: 70%;
     --y: 50%; */
     --dots-gap: max(10px, 0.6vw);
-    --dots-size: 20px; /* dots size */
-    --dots-color: rgb(255, 255, 255, 30%);
+    --dots-size: 20px;
+    --dots-color: rgb(255, 255, 255, 20%);
     --ripples-size: 20vmin;
     --ripples-opacity: 0%;
 
