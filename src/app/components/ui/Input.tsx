@@ -42,6 +42,7 @@ const Input = ({
         value={value}
         placeholder={placeholder}
         className={classes}
+        type={type}
       ></input>
       {errorDisplay}
     </div>

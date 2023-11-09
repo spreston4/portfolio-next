@@ -1,5 +1,8 @@
 module.exports = {
-  setupFilesAfterEnv: ["./jest.setup.ts"],
-  testPathIgnorePatterns: ["./.next/", "./node_modules/"],
+  setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
+  testPathIgnorePatterns: ["<rootDir>/.next/", "<rootDir>/node_modules/"],
   testEnvironment: "jsdom",
+  moduleNameMapper: {
+    "\\.(jpg|jpeg|png|gif|svg)$": "<rootDir>/__mocks__/fileMock.js",
+  },
 };
