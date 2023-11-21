@@ -1,10 +1,17 @@
 import ProjectCard, { ProjectCardProps } from "./ui/ProjectCard";
+import hk from "../../../public/assets/images/projects/Hooks.png";
 import cf from "../../../public/assets/images/projects/CampFinder.png";
 import of from "../../../public/assets/images/projects/OrderFood.png";
 import ny from "../../../public/assets/images/projects/NytReview.png";
 
 const Portfolio = () => {
   const projects: ProjectCardProps[] = [
+    {
+      title: "SP Dev Hooks",
+      description: "NPM Package of useful React Hooks.",
+      image: hk,
+      url: "https://github.com/spreston4/spdev-hooks",
+    },
     {
       title: "Camp Finder",
       description: "Plan a camping trip.",
@@ -28,7 +35,9 @@ const Portfolio = () => {
     <div id="portfolio">
       <div className="container-mobile md:container bg-white flex flex-col items-center">
         <h2 className="heading-small text-dark mb-6">Portfolio</h2>
-        <p className="body-large sm:body-medium">Explore some examples of my work.</p>
+        <p className="body-large sm:body-medium">
+          Explore some examples of my work.
+        </p>
       </div>
       <div className="container-mobile md:container bg-white">
         <div className=" flex items-center justify-evenly flex-wrap gap-12">
